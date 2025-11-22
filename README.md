@@ -4,7 +4,7 @@ Bem-vindo ao **Catálogo de Filmes**, uma aplicação web desenvolvida para o ge
 
 ---
 
-## 🚀 Funcionalidades
+## 🎬 Funcionalidades
 
 O sistema oferece um **CRUD Completo** (Create, Read, Update, Delete):
 
@@ -46,7 +46,7 @@ A organização segue as boas práticas do Flask:
 ```
 ---
 
-## 🛠️ Tecnologias
+## ⚙️ Tecnologias
 
 * **Python**
 * **Flask**
