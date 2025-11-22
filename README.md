@@ -1,4 +1,4 @@
-# Catálogo de Filmes - Projeto Flask
+# 📽️ Catálogo de Filmes - Projeto Flask
 
 Bem-vindo ao **Catálogo de Filmes**, uma aplicação web desenvolvida para o gerenciamento pessoal de coleções de filmes. Este projeto foi construído seguindo o padrão de arquitetura **MVC**, utilizando **Python/Flask** no back-end e **HTML/CSS/JS** no front-end.
 
@@ -20,21 +20,38 @@ O sistema oferece um **CRUD Completo** (Create, Read, Update, Delete):
 
 A organização segue as boas práticas do Flask:
 
-* **run.py**: Arquivo principal que inicia o servidor.
-* **app/**: Pasta contendo todo o código fonte.
-    * **models/filme.py**: Define a tabela do banco de dados.
-    * **controllers/views.py**: Controla as rotas e a lógica do sistema.
-    * **templates/**: Arquivos HTML (Jinja2) para as páginas.
-    * **static/**: Arquivos CSS (estilo) e JS (scripts).
-
+```text
+/projeto_final
+│
+├── run.py                  # 🚀 Inicializador: Gerencia o contexto e executa o servidor
+│
+├── /app                    # 📦 Pacote Principal da Aplicação
+│   ├── __init__.py         # Cria o App e o Banco de Dados
+│   │
+│   ├── /models
+│   │   └── filme.py        # 🗄️ Modelo de Dados (Tabela SQL)
+│   │
+│   ├── /controllers
+│   │   └── views.py        # 🎮 Controlador: Gerencia rotas e lógica de requisições
+│   │
+│   ├── /static             # 🎨 Arquivos Estáticos
+│   │   ├── /css
+│   │   │   └── style.css   # Folhas de estilo para layout e design
+│   │   └── /js
+│   │       └── script.js   # Scripts de interatividade (DOM)
+│   │
+│   └── /templates          # 📑 Camada de Visualização (HTML + Jinja2)
+│       ├── filme.html      # Dashboard principal (Lista e Formulário de Adição)
+│       └── editar.html     # Interface dedicada para atualização de dados
+```
 ---
 
 ## 🛠️ Tecnologias
 
-* **Python 3**
-* **Flask** (Microframework Web)
-* **SQLAlchemy** (Banco de Dados ORM)
-* **HTML5 & CSS3**
+* **Python**
+* **Flask**
+* **SQLAlchemy** (Banco de Dados)
+* **HTML e CSS**
 * **JavaScript** (Interatividade no Front-end)
 
 ---
