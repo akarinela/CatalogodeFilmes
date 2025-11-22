@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    
+    <div class="container">
+        
+        <h1>Catálogo de Filmes</h1>
+
+        <form action="{{ url_for('adicionar') }}" method="POST">
+            <h2>+ Adicionar Novo Filme</h2>
+            <label>Título</label>
+            <input type="text" name="titulo">
+            
+            <label>Gênero</label>
+            <input type="text" name="genero">
+            
+            <label>Ano de Lançamento</label>
+            <input type="number" name="ano">
+            
+            <button type="submit">Adicionar à Lista</button>
+        </form>
+
+        <h2>Minha Coleção</h2>
+        <ul>
+            {% for filme in filmes %}
+            <li>
+                <div>
+                    <strong>{{ filme.titulo }}</strong>
+                    <small>{{ filme.genero if filme.genero else 'Gênero' }} • {{ filme.ano if filme.ano else 'Ano' }}</small>
+                </div>
+
+                <div class="acoes">
+                    <a href="{{ url_for('editar', id=filme.id) }}" class="btn-editar">EDITAR</a>
+                    <a href="{{ url_for('excluir', id=filme.id) }}" onclick="confirmarExclusao(event)" class="btn-excluir">EXCLUIR</a>
+
+                </div>
+            </li>
+            {% else %}
+            <p style="text-align: center; color: #777;">Sua lista está vazia.</p>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
